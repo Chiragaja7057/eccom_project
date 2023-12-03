@@ -1,113 +1,104 @@
-import Image from 'next/image'
+
+import { Component, useEffect } from "react";
+
+import Image from 'next/image';
+import * as Images from '../../public/images';
+import React, { useState } from "react";
+
+interface productList1 {
+  id: string,
+  Name: string,
+  description: string,
+  Image: any
+}
 
 export default function Home() {
+
+  const productList1: productList1[] = [
+    {
+      id: '1',
+      Name: 'Fastract Watch',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      Image: Images.branding.Watch
+    },
+    {
+      id: '2',
+      Name: 'Piter England Shirt',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      Image: Images.branding.Watch
+    },
+    {
+      id: '3',
+      Name: 'Piter England Shirt neo',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      // Image: Images.branding.Shirt2
+      Image: Images.branding.Watch
+
+    },
+    {
+      id: '4',
+      Name: 'Pants',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      // Image: Images.branding.Shirt1
+      Image: Images.branding.Watch
+
+    },
+    {
+      id: '5',
+      Name: 'Fastract Watch ++',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      Image: Images.branding.Watch
+    },
+    {
+      id: '6',
+      Name: 'Piter England Shirt office',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      // Image: Images.branding.Shirt1
+      Image: Images.branding.Watch
+    },
+    {
+      id: '7',
+      Name: 'Piter England Shirt summer',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      // Image: Images.branding.Shirt2
+      Image: Images.branding.Watch
+    },
+    {
+      id: '8',
+      Name: 'Night Pant ',
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eveniet ullam dolore, nulla recusandae amet aspernatur magnam? Labore quae cumque esse hic? At quisquam rerum ratione fugit, tenetur unde! Nisi!",
+      Image: Images.branding.Watch
+    },
+
+
+  ]
+
+  const newYorkCityImg = Images.branding.LandingPage1
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+
+      <div className='relative w-full md:h-[550px] lg:h-[550px] 2xl:h-[700px] xl:h-[600px] h-[750px] overflow-x-hidden "'>
+        <div className='backgroundV3'></div>
+        <div className='backgroundV3Gradient'></div>
+        <div className='z-50 relative '>
+          <div className='font-extrabold text-transparent lg:text-5xl text-3xl py-7 pl-5 flex items-center bg-clip-text bg-gradient-to-r from-red-400 via-blue-500 to-blue-400 ml-3 ' > Play &#62;&#62; Fashion </div>
+          <Image src={Images.branding.LandingPage1} alt={''} className='float-right lg:w-[28rem] lg:block hidden -translate-x-20 opacity-85 -translate-y-8 '></Image>
+
+          <div className='text-white lg:w-6/12 p-8 leading-loose tracking-widest'>
+            <p className='xl:text-[40px] lg:text-[30px] text-lg font-bold'>Lorem Ipsum Lorem ipSum</p>
+            <ul className='xl:text-xl lg:text-base text-sm mt-2 text-gray-400 list-disc ml-5 '>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corporis dignissimos natus nemo odio eius a deserunt ad impedit itaque.</li>
+              <li>Eius exercitationem praesentium nemo magni totam dolorem dolore voluptatem fugit.</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corporis dignissimos natus nemo odio eius a deserunt ad impedit itaque.</li>
+              <li>Eius exercitationem praesentium nemo magni totam dolorem dolore voluptatem fugit.</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
+
+
